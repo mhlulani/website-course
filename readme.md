@@ -7,6 +7,56 @@
 - http-server
 - Visual Studio Code
 
+## HTML 5 Structure
+The skeleton of all HTML5 pages should look like the following:
+```html
+<!DOCTYPE html>
+<html lang="en"> <!-- ALWAYS specify the language, this helps browsers and search engines in displaying your page -->
+    <head>
+        <meta charset="utf-8"/> <!-- This should always be the first element in the header, see https://www.w3.org/International/questions/qa-html-encoding-declarations -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Mobile compatible website/app-->
+        <!--
+        <meta name="description" content="Page synopsis, this must be less than 155 characters">
+        <meta name="author" content="Just to Brag">
+        -->
+        <title>Name of the page here</title>
+        <!--
+        <link rel="stylesheet" type="text/css" href="assets/css/default.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        -->
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <li>Menu item</li>
+                <li>Menu item</li>
+                <li>Menu item</li>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <header>
+                    <h2>Article Title</h2>
+                    <p>Article content goes here</p>
+                </header>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Section Title</h2>
+            <p>Content of the Section</p>
+        </aside>
+
+        <footer>
+            <p>Copyright @year @name</p>
+        </footer>
+    </body>
+</html>
+```
+
 ## Colours
 
 Colours in CSS are defined using the Red, Green, Blue (RGB) model (#RRGGBB)
@@ -288,7 +338,7 @@ Next we create a landing/main page for the whole website:
 <!doctype html>
 <html lang="en"> <!-- This helps search engines -->
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+		<meta charset="utf-8"/>
 		<title>My Kickass Site</title>
 		<link rel="stylesheet" type="text/css" href="assets/normalize/css/normalize.css" />
 		
@@ -312,7 +362,7 @@ Mobile devices should never zoom out of the web page because the content tents t
 ```html
 <html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8"/>
 		<!-- Don't Zoomout this is specifically for smaller screens -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
@@ -456,7 +506,7 @@ iPad 3
 ```html
 	...
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>My Kickass Site</title>
 		<link rel="stylesheet" type="text/css" href="assets/normalize/css/normalize.css">		
@@ -474,7 +524,7 @@ Web pages can declare extra metadata which help the search engines in presenting
 <!doctype html>
 <html lang="en"> <!-- This helps search engines -->
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8"/>
 		<meta name="description" content="Page synopsis, this must be less than 155 characters">
 		<!-- The Keywords metadata is no longer used nowadays only a few search engines still use this and it can be ignored -->
 		<meta name="keywords" content="fruits, vegetables, watches" >
@@ -491,6 +541,7 @@ Web pages can declare extra metadata which help the search engines in presenting
 <!doctype html>
 <html lang="en">
 	<head>
+        <meta charset="utf-8"/>
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<title>Kickass Site</title>
